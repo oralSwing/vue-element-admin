@@ -69,7 +69,6 @@ const tagsView = {
         }
       }
     }
-
   },
   actions: {
     addView({ dispatch }, view) {

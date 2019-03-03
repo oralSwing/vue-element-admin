@@ -73,7 +73,12 @@ export const constantRouterMap = [
         path: 'dashboard',
         component: () => import('@/views/dashboard/index'),
         name: 'Dashboard',
-        meta: { title: 'dashboard', icon: 'dashboard', noCache: true, affix: true }
+        meta: {
+          title: 'dashboard',
+          icon: 'dashboard',
+          noCache: true,
+          affix: true
+        }
       }
     ]
   },
@@ -143,7 +148,18 @@ export const asyncRouterMap = [
       }
     ]
   },
-
+  {
+    path: '/vue-easytable',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/vue-easytable/index'),
+        name: 'easytable',
+        meta: { title: 'vue-easytable', icon: '404', noCache: true }
+      }
+    ]
+  },
   {
     path: '/icon',
     component: Layout,

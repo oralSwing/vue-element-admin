@@ -12,7 +12,7 @@ import '@/styles/index.scss' // global css
 import App from './App'
 import store from './store'
 import router from './router'
-
+import moment from 'moment'
 import i18n from './lang' // Internationalization
 import './icons' // icon
 import './errorLog' // error log
@@ -33,10 +33,11 @@ Object.keys(filters).forEach(key => {
 
 Vue.config.productionTip = false
 
-new Vue({
+window.vm = new Vue({
   el: '#app',
   router,
   store,
   i18n,
+  moment,
   render: h => h(App)
 })
