@@ -1,29 +1,14 @@
 import request from '@/utils/request'
-
 export function loginByUsername(username, password) {
   const data = {
-    username,
+    userName: username,
     password
   }
-  return request({
-    url: '/login/login',
-    method: 'post',
-    data
-  })
+  return request.get('api/User/login', { params: data })
 }
 
 export function logout() {
-  return request({
-    url: '/login/logout',
-    method: 'post'
+  return new Promise((resolve, reject) => {
+    resolve()
   })
 }
-
-export function getUserInfo(token) {
-  return request({
-    url: '/user/info',
-    method: 'get',
-    params: { token }
-  })
-}
-
