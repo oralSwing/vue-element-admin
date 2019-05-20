@@ -78,7 +78,7 @@
     "chalk": "2.4.1",
     "compression-webpack-plugin": "2.0.0",
     "connect": "3.6.6",
-    "copy-webpack-plugin": "4.5.2",
+    "copy-webpack-plugin": "^4.5.2",
     "cross-env": "5.2.0",
     "css-loader": "1.0.0",
     "eslint": "4.19.1",

@@ -1,5 +1,8 @@
 <template>
-  <div>菜单管理</div>
+  <div>
+    <h4>菜单管理</h4>
+    <img src="../../../static/coalresults/pics/1-101.png" alt>
+  </div>
 </template>
 
 <script>

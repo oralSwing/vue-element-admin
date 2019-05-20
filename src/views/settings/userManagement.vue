@@ -172,8 +172,8 @@
         </el-form-item>
         <el-form-item v-if="dialogStatus==='create'" label="状态">
           <el-select v-model="temp.enabled" placeholder="请选择">
-            <el-option :value="true" label="启用"/>
-            <el-option :value="false" label="禁用"/>
+            <el-option :key="0" :value="true" label="启用"/>
+            <el-option :key="1" :value="false" label="禁用"/>
           </el-select>
         </el-form-item>
       </el-form>
@@ -182,7 +182,7 @@
         <el-button
           type="primary"
           @click="dialogStatus==='create'?createData():updateData()"
-        >{{ $t('table.confirm') }}</el-button>|
+        >{{ $t('table.confirm') }}</el-button>
       </div>
     </el-dialog>
   </div>
@@ -254,6 +254,11 @@ export default {
         name: [{ required: true, message: '姓名不能为空', trigger: 'blur' }]
       },
       downloadLoading: false
+    }
+  },
+  watch: {
+    temp(oldValue, newValue) {
+      console.log(oldValue, newValue)
     }
   },
   created() {
