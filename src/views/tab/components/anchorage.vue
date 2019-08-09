@@ -134,7 +134,7 @@
         <el-row>
           <el-col span="12">
             <el-form-item :label="$t('table.coalName')" prop="coalName">
-              <el-select v-model="tempMaodi.coalName" placeholder="Please select">
+              <el-select v-model="tempMaodi.coalName" filterable placeholder="Please select">
                 <el-option v-for="item in coalNameOptions" :key="item" :label="item" :value="item" />
               </el-select>
             </el-form-item>
@@ -169,7 +169,7 @@
         <el-row>
           <el-col span="12">
             <el-form-item :label="$t('table.supplier')" prop="supplier">
-              <el-select v-model="tempMaodi.supplier" placeholder="Please select">
+              <el-select v-model="tempMaodi.supplier" filterable placeholder="Please select">
                 <el-option
                   v-for="item in supplierNameOptions"
                   :key="item"
@@ -218,7 +218,7 @@
         <el-row>
           <el-col span="12">
             <el-form-item :label="$t('table.coalName')" prop="coalName">
-              <el-select v-model="tempKaobo.coalName" placeholder="Please select">
+              <el-select v-model="tempKaobo.coalName" filterable placeholder="Please select">
                 <el-option v-for="item in coalNameOptions" :key="item" :label="item" :value="item" />
               </el-select>
             </el-form-item>
@@ -524,7 +524,7 @@ export default {
     },
 
     handleMaodi(row) {
-      if (row.id === null) {
+      if (row.id == null) {
         this.$message({
           type: 'info',
           message: '请选择一条记录'
@@ -539,7 +539,7 @@ export default {
     },
 
     handleKaobo(row) {
-      if (row.id === null) {
+      if (row.id == null) {
         this.$message({
           type: 'info',
           message: '请选择一条记录'
@@ -599,7 +599,7 @@ export default {
     },
     open(row) {
       const id = row.id
-      if (id === null) {
+      if (id == null) {
         this.$message({
           type: 'info',
           message: '请选择一条记录'
@@ -634,7 +634,7 @@ export default {
     },
 
     goBack(row) {
-      if (row.id === null) {
+      if (row.id == null) {
         this.$message({
           type: 'info',
           message: '请选择一条记录'

@@ -117,7 +117,7 @@
         <el-row>
           <el-col span="12">
             <el-form-item :label="$t('table.coalName')" prop="coalName">
-              <el-select v-model="temp.coalName" placeholder="Please select">
+              <el-select v-model="temp.coalName" filterable placeholder="Please select">
                 <el-option v-for="item in coalNameOptions" :key="item" :label="item" :value="item" />
               </el-select>
             </el-form-item>
@@ -145,7 +145,7 @@
         <el-row>
           <el-col span="12">
             <el-form-item :label="$t('table.supplier')" prop="supplier">
-              <el-select v-model="temp.supplier" placeholder="Please select">
+              <el-select v-model="temp.supplier" filterable placeholder="Please select">
                 <el-option
                   v-for="item in supplierNameOptions"
                   :key="item"

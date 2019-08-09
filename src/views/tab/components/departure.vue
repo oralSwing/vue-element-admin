@@ -145,6 +145,7 @@
             <el-form-item :label="$t('table.coalName')">
               <el-select
                 v-model="coalNames"
+                filterable
                 multiple="true"
                 multiple-limit="2"
                 placeholder="Please select"
@@ -238,7 +239,7 @@
         <el-row>
           <el-col span="12">
             <el-form-item :label="$t('table.coalName')" prop="coalName">
-              <el-select v-model="tempMaodi.coalName" placeholder="Please select">
+              <el-select v-model="tempMaodi.coalName" filterable placeholder="Please select">
                 <el-option v-for="item in coalNameOptions" :key="item" :label="item" :value="item" />
               </el-select>
             </el-form-item>
@@ -288,7 +289,7 @@
         <el-row>
           <el-col span="12">
             <el-form-item :label="$t('table.coalName')" prop="coalName">
-              <el-select v-model="tempKaobo.coalName" placeholder="Please select">
+              <el-select v-model="tempKaobo.coalName" filterable placeholder="Please select">
                 <el-option v-for="item in coalNameOptions" :key="item" :label="item" :value="item" />
               </el-select>
             </el-form-item>
@@ -700,7 +701,7 @@ export default {
       })
     },
     handleUpdate(row) {
-      if (row.id === null) {
+      if (row.id == null) {
         this.$message({
           type: 'info',
           message: '请选择一条记录'
@@ -715,7 +716,7 @@ export default {
       })
     },
     handleMaodi(row) {
-      if (row.id === null) {
+      if (row.id == null) {
         this.$message({
           type: 'info',
           message: '请选择一条记录'
@@ -730,7 +731,7 @@ export default {
     },
 
     handleKaobo(row) {
-      if (row.id === null) {
+      if (row.id == null) {
         this.$message({
           type: 'info',
           message: '请选择一条记录'
@@ -810,7 +811,7 @@ export default {
     },
 
     open(row) {
-      if (row.id === null) {
+      if (row.id == null) {
         this.$message({
           type: 'info',
           message: '请选择一条记录'
